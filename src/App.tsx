@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+
+import Header from "components/header/Header";
 import { GlobalStyle } from "./styles/globalStyles";
 import { theme } from "./styles/theme/theme";
 
@@ -9,7 +11,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <h1 style={{ display: "none" }}>테스트고정</h1>
+        <Header />
         <Outlet />
       </ThemeProvider>
     </>

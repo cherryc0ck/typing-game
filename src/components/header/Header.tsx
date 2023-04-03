@@ -17,8 +17,11 @@ const StyledHeader = styled.header`
 
     h1 {
       margin-bottom: 2rem;
-      background: linear-gradient(to right top, #861657, #ffa69e);
-      color: transparent;
+      background: -webkit-linear-gradient(-70deg, #189cc4 0%, red 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
       font-family: "lato";
       ${theme.typo.heavy32};
       -webkit-background-clip: text;

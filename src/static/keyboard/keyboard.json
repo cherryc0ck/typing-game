@@ -1,0 +1,236 @@
+[
+  [
+    {
+      "main": "~",
+      "sub": "`"
+    },
+    {
+      "main": "!",
+      "sub": "1"
+    },
+    {
+      "main": "@",
+      "sub": "2"
+    },
+    {
+      "main": "#",
+      "sub": "3"
+    },
+    {
+      "main": "$",
+      "sub": "4"
+    },
+    {
+      "main": "%",
+      "sub": "5"
+    },
+    {
+      "main": "^",
+      "sub": "6"
+    },
+    {
+      "main": "&",
+      "sub": "7"
+    },
+    {
+      "main": "*",
+      "sub": "8"
+    },
+    {
+      "main": "(",
+      "sub": "9"
+    },
+    {
+      "main": ")",
+      "sub": "0"
+    },
+    {
+      "main": "_",
+      "sub": "-"
+    },
+    {
+      "main": "+",
+      "sub": "="
+    },
+    {
+      "origin": "BACKSPACE",
+      "main": "delete",
+      "size": "8.4rem",
+      "pos": "end"
+    }
+  ],
+  [
+    {
+      "origin": "TAB",
+      "main": "tab",
+      "size": "8.4rem",
+      "pos": "start"
+    },
+    {
+      "main": "Q",
+      "ko": "ㅂ"
+    },
+    {
+      "main": "W",
+      "ko": "ㅈ"
+    },
+    {
+      "main": "E",
+      "ko": "ㄷ"
+    },
+    {
+      "main": "R",
+      "ko": "ㄱ"
+    },
+    {
+      "main": "T",
+      "ko": "ㅅ"
+    },
+    {
+      "main": "Y",
+      "ko": "ㅛ"
+    },
+    {
+      "main": "U",
+      "ko": "ㅕ"
+    },
+    {
+      "main": "I",
+      "ko": "ㅑ"
+    },
+    {
+      "main": "O",
+      "ko": "ㅐ"
+    },
+    {
+      "main": "P",
+      "ko": "ㅔ"
+    },
+    {
+      "main": "{",
+      "sub": "["
+    },
+    {
+      "main": "}",
+      "sub": "]"
+    },
+    {
+      "main": "|",
+      "sub": "\\"
+    }
+  ],
+  [
+    {
+      "origin": "CAPSLOCK",
+      "main": "한/A",
+      "size": "9.6rem",
+      "pos": "start"
+    },
+    {
+      "main": "A",
+      "ko": "ㅁ"
+    },
+    {
+      "main": "S",
+      "ko": "ㄴ"
+    },
+    {
+      "main": "D",
+      "ko": "ㅇ"
+    },
+    {
+      "main": "F",
+      "ko": "ㄹ"
+    },
+    {
+      "main": "G",
+      "ko": "ㅎ"
+    },
+    {
+      "main": "H",
+      "ko": "ㅗ"
+    },
+    {
+      "main": "J",
+      "ko": "ㅓ"
+    },
+    {
+      "main": "K",
+      "ko": "ㅏ"
+    },
+    {
+      "main": "L",
+      "ko": "ㅣ"
+    },
+    {
+      "main": ":",
+      "sub": ";"
+    },
+    {
+      "main": "'",
+      "sub": "“"
+    },
+    {
+      "origin": "ENTER",
+      "main": "return",
+      "size": "9rem",
+      "pos": "end"
+    }
+  ],
+  [
+    {
+      "origin": "SHIFT",
+      "id": "leftShift",
+      "main": "shift",
+      "size": "12rem",
+      "pos": "start"
+    },
+    {
+      "main": "Z",
+      "ko": "ㅋ"
+    },
+    {
+      "main": "X",
+      "ko": "ㅌ"
+    },
+    {
+      "main": "C",
+      "ko": "ㅊ"
+    },
+    {
+      "main": "V",
+      "ko": "ㅍ"
+    },
+    {
+      "main": "B",
+      "ko": "ㅠ"
+    },
+    {
+      "main": "N",
+      "ko": "ㅜ"
+    },
+    {
+      "main": "M",
+      "ko": "ㅡ"
+    },
+    {
+      "main": "<",
+      "sub": ","
+    },
+    {
+      "main": ">",
+      "sub": "."
+    },
+    {
+      "main": "?",
+      "sub": "/"
+    },
+    {
+      "id": "rightShift",
+      "origin": "SHIFT",
+      "main": "shift",
+      "size": "12rem",
+      "pos": "end"
+    }
+  ]
+]

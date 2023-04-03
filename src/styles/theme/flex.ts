@@ -1,18 +1,18 @@
 import { css } from "styled-components";
 
 export const flex = {
-  flexColCenter: () => css`
+  colCenter: () => css`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   `,
-  flexRowCenter: () => css`
+  rowCenter: () => css`
     display: flex;
     align-items: center;
     justify-content: center;
   `,
-  flexRowBetween: () => css`
+  rowBetween: () => css`
     display: flex;
     align-items: center;
     justify-content: space-between;

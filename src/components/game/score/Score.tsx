@@ -1,32 +1,18 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import { useEffect } from "react";
+import { useAnimationControls } from "framer-motion";
 
-import { useGameScore } from "context/game/GameScoreContext";
+import { useGameScore } from "@/context/game/GameScoreContext";
+import * as S from "./Score.styled";
 
 const Score = () => {
   const { score } = useGameScore();
+  const controls = useAnimationControls();
 
-  return (
-    <StyledContainer>
-      <span>{score}</span>
-    </StyledContainer>
-  );
+  useEffect(() => {
+    score > 0 && controls.start({ scale: [1, 1.5, 1] });
+  }, [score, controls]);
+
+  return <S.Span animate={controls}>{score}</S.Span>;
 };
-
-const StyledContainer = styled.div`
-  ${({ theme }) => css`
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    ${theme.flex.rowCenter};
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 50%;
-    background-color: ${theme.colors.white};
-    span {
-      ${theme.typo.eBold16};
-    }
-  `}
-`;
 
 export default Score;

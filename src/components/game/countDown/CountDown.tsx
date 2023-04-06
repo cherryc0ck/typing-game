@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import { useEffect, useState } from "react";
+import * as S from "./CountDown.styled";
 
 type CountDownProps = {
   isPlay: boolean;
-  onChangePlay: () => void;
+  onStartGame: () => void;
+  onStopGame: () => void;
 };
 
-const CountDown = ({ isPlay, onChangePlay }: CountDownProps) => {
-  const [timer, setTimer] = useState<number>(60);
+const CountDown = ({ isPlay, onStartGame, onStopGame }: CountDownProps) => {
+  const [timer, setTimer] = useState(60);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -16,27 +17,13 @@ const CountDown = ({ isPlay, onChangePlay }: CountDownProps) => {
 
     if (timer === 0) {
       clearInterval(id);
+      onStopGame();
     }
 
     return () => clearInterval(id);
   }, [timer]);
 
-  return (
-    <StyledContainer>
-      <span>{timer}</span>
-    </StyledContainer>
-  );
+  return <S.Span>{timer}</S.Span>;
 };
-
-const StyledContainer = styled.div`
-  ${({ theme }) => css`
-    ${theme.flex.rowCenter};
-    span {
-      color: ${theme.colors.black};
-      font-family: "lato";
-      ${theme.typo.heavy32};
-    }
-  `}
-`;
 
 export default CountDown;

@@ -1,17 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import * as S from "./Button.styled";
 
-type ChildrenProps = {
+type ButtonProps = {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
-const Button = ({ children, onClick }: ChildrenProps) => {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+const Button = ({ children, onClick }: ButtonProps) => {
+  return <S.Button onClick={onClick}>{children}</S.Button>;
 };
-
-const StyledButton = styled.button`
-  border-radius: 1.2rem;
-`;
 
 export default Button;

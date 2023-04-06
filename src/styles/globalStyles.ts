@@ -4,30 +4,35 @@ import reset from "styled-reset";
 export const GlobalStyle = createGlobalStyle`
   ${reset}
   @font-face {
+    font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 300;
     src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-aLt.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 400;
     src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-bRg.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 500;
     src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-cBd.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 600;
     src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-dEb.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 700;
@@ -35,30 +40,35 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
+    font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 100;
     src: url('/fonts/Lato/ttf/Lato-Thin.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 300;
     src: url('/fonts/Lato/ttf/Lato-Light.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 400;
     src: url('/fonts/Lato/ttf/Lato-Regular.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 700;
     src: url('/fonts/Lato/ttf/Lato-Bold.ttf');
   }
   @font-face {
+    font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 900;
@@ -84,7 +94,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: pink;
-    font-family: 'nanumSquareNeo';
+    font-family: "lato";
   }
 
   #root {
@@ -98,8 +108,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     cursor: pointer;
     user-select: none;
-    font-family: 'nanumSquareNeo';
-
+    
     &:disabled {
       cursor: not-allowed;
     }

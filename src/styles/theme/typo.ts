@@ -4,7 +4,7 @@ export const typo = {
   light12: () => css`
     font-size: 1.2rem;
     font-weight: 300;
-    line-height: 2rem;
+    line-height: 1.5;
   `,
   light14: () => css`
     font-size: 1.4rem;

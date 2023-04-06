@@ -1,26 +1,24 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useState,
+} from "react";
 
-type ChildrenProps = {
-  children: React.ReactNode;
-};
-
-type ContextProps = {
+type GameScoreContextValues = {
   score: number;
-  upScore: () => void;
+  addScore: () => void;
 };
 
-export const GameScoreContext = createContext<ContextProps | undefined>(
-  undefined
-);
+export const GameScoreContext = createContext({} as GameScoreContextValues);
 
-export const GameScoreProvider = ({ children }: ChildrenProps) => {
-  const [score, setScore] = useState<number>(0);
-  const upScore = () => {
-    setScore(score + 1);
-  };
+export const GameScoreProvider = ({ children }: PropsWithChildren) => {
+  const [score, setScore] = useState(0);
+
+  const addScore = () => setScore((prev) => prev + 1);
 
   return (
-    <GameScoreContext.Provider value={{ score, upScore }}>
+    <GameScoreContext.Provider value={{ score, addScore }}>
       {children}
     </GameScoreContext.Provider>
   );
@@ -30,9 +28,7 @@ export const useGameScore = () => {
   const context = useContext(GameScoreContext);
 
   if (!context) {
-    throw new Error(
-      "useCounterContext must be used within a CounterContextProvider"
-    );
+    throw new Error("GameScoreContext must be used within a GameScoreProvider");
   }
   return context;
 };

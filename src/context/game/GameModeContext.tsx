@@ -1,27 +1,38 @@
-import React, { createContext, useContext, useState } from "react";
-import type { GameMode } from "types/game";
+import {
+  createContext,
+  useContext,
+  useState,
+  useMemo,
+  useCallback,
+  PropsWithChildren,
+} from "react";
 
-type ChildrenProps = {
-  children: React.ReactNode;
-};
+import type { GameMode } from "@/types/game";
 
-type ContextProps = {
-  gameMode: string;
+type GameModeContextValues = {
+  gameMode: GameMode;
   onSetGameMode: (gameMode: GameMode) => void;
 };
 
-export const GameModeContext = createContext<ContextProps | undefined>(
-  undefined
-);
+export const GameModeContext = createContext({} as GameModeContextValues);
 
-export const GameModeProvider = ({ children }: ChildrenProps) => {
+export const GameModeProvider = ({ children }: PropsWithChildren) => {
   const [gameMode, setGameMode] = useState<GameMode>("init");
-  const onSetGameMode = (gameMode: GameMode) => {
+
+  const onSetGameMode = useCallback((gameMode: GameMode) => {
     setGameMode(gameMode);
-  };
+  }, []);
+
+  const contextValue = useMemo(
+    () => ({
+      gameMode,
+      onSetGameMode,
+    }),
+    [gameMode, onSetGameMode]
+  );
 
   return (
-    <GameModeContext.Provider value={{ gameMode, onSetGameMode }}>
+    <GameModeContext.Provider value={contextValue}>
       {children}
     </GameModeContext.Provider>
   );

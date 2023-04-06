@@ -1,1 +1,1 @@
-export type GameMode = "init" | "base";
+export type GameMode = "init" | "end" | "base";

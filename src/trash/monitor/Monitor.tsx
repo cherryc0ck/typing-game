@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-import background from "assets/background/background.png";
-import { ReactComponent as StandIcon } from "assets/icon/stand.svg";
+import { ReactComponent as StandIcon } from "@/assets/icon/stand.svg";
 
 const Monitor = () => {
   return (
@@ -43,7 +41,7 @@ const StyledScreen = styled.div`
   top: 2.4rem;
   width: 65rem;
   height: 31rem;
-  background: url(${background}), rgba(196, 196, 196, 0.2);
+
   background-color: #fff;
   border-radius: 3px;
 `;

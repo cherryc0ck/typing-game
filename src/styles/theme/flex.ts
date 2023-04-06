@@ -1,20 +1,15 @@
 import { css } from "styled-components";
 
 export const flex = {
-  colCenter: () => css`
+  row: (just = "center", align = "center") => css`
+    display: flex;
+    justify-content: ${just};
+    align-items: ${align};
+  `,
+  col: (just = "center", align = "center") => css`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  `,
-  rowCenter: () => css`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `,
-  rowBetween: () => css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: ${just};
+    align-items: ${align};
   `,
 };

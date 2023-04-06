@@ -3,21 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@tanstack/react-query": "^4.28.0",
     "@tanstack/react-query-devtools": "^4.28.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.21",
-    "@types/react": "^18.0.30",
-    "@types/react-dom": "^18.0.11",
     "axios": "^1.3.4",
     "body-parser": "^1.20.2",
     "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-generator": "^4.16.1",
+    "framer-motion": "^10.10.0",
     "immer": "^9.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,12 +31,12 @@
   },
   "scripts": {
     "server": "cd server && nodemon server",
-    "client": "react-scripts start",
+    "client": "craco start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -62,10 +57,15 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "@types/styled-components": "^5.1.26",
+    "craco-alias": "^3.0.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.22",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "tsconfig-paths-webpack-plugin": "^4.0.1"
   }
 }

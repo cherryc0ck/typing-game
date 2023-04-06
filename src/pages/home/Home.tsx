@@ -1,23 +1,18 @@
-import GameStep from "components/game/gameStep/GameStep";
-import Keyboard from "components/keyboard/Keyboard";
-import { GameModeProvider } from "context/game/GameModeContext";
-import React from "react";
-import styled from "styled-components";
+import { GameModeProvider } from "@/context/game/GameModeContext";
+import GameStep from "@/components/game/gameStep/GameStep";
+import Keyboard from "@/components/keyboard/Keyboard";
+
+import * as S from "./Home.styled";
 
 const Home = () => {
   return (
-    <StyledContainer>
-      <GameModeProvider>
+    <GameModeProvider>
+      <S.Container>
         <GameStep />
         <Keyboard />
-      </GameModeProvider>
-    </StyledContainer>
+      </S.Container>
+    </GameModeProvider>
   );
 };
-
-const StyledContainer = styled.section`
-  width: 80rem;
-  margin: 0 auto;
-`;
 
 export default Home;

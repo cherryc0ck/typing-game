@@ -11,24 +11,39 @@ import type { GameMode } from "@/types/game";
 
 type GameModeContextValues = {
   gameMode: GameMode;
-  onSetGameMode: (gameMode: GameMode) => void;
+  isPlay: boolean;
+  handleSetGameMode: (gameMode: GameMode) => void;
+  handleStartPlay: () => void;
+  handleStopPlay: () => void;
 };
 
 export const GameModeContext = createContext({} as GameModeContextValues);
 
 export const GameModeProvider = ({ children }: PropsWithChildren) => {
   const [gameMode, setGameMode] = useState<GameMode>("init");
+  const [isPlay, setIsPlay] = useState(false);
 
-  const onSetGameMode = useCallback((gameMode: GameMode) => {
+  const handleSetGameMode = useCallback((gameMode: GameMode) => {
     setGameMode(gameMode);
+  }, []);
+
+  const handleStartPlay = useCallback(() => {
+    setIsPlay(true);
+  }, []);
+
+  const handleStopPlay = useCallback(() => {
+    setIsPlay(false);
   }, []);
 
   const contextValue = useMemo(
     () => ({
       gameMode,
-      onSetGameMode,
+      isPlay,
+      handleSetGameMode,
+      handleStartPlay,
+      handleStopPlay,
     }),
-    [gameMode, onSetGameMode]
+    [gameMode, isPlay, handleSetGameMode, handleStartPlay, handleStopPlay]
   );
 
   return (

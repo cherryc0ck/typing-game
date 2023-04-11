@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import reset from "styled-reset";
 
 export const GlobalStyle = createGlobalStyle`
@@ -87,14 +87,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: pink;
-    font-family: "lato";
+    ${({ theme }) => css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "lato";
+      background-color: ${(props) => props.theme.colors.main};
+    `}
   }
 
   #root {

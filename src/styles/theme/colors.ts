@@ -3,7 +3,7 @@ export const colors = {
   black: "#141414",
   black600: "#2F1B1A",
   gray900: "#191919",
-  gray800: "#333333",
+  gray800: "#888",
   gray700: "#4C4C4C",
   gray600: "#666666",
   gray500: "#7F7F7F",
@@ -13,10 +13,14 @@ export const colors = {
   gray100: "#E5E5E5",
   gray50: "#F6F6F6",
   gray10: "#FAFAFA",
-  blue500: "#2E90FA",
-  blue200: "#B2DDFF",
-  error500: "#F04438",
-  yellow500: "#F8D706",
+  blue: "#189cc4",
+  red: "#f05650",
   navy: "#301b3f",
   pink: "pink",
+
+  //주황..?
+  //#ffa477
+
+  //핫핑크 비슷
+  //"#fb6f92"
 };

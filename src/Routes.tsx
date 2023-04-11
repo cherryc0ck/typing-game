@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Home from "@/pages/home/Home";
+import { ThemeColorProvider } from "./context/color/ThemeColorContext";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -12,7 +13,11 @@ const Routes = () => {
       children: [{ index: true, element: <Home /> }],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeColorProvider>
+      <RouterProvider router={router} />
+    </ThemeColorProvider>
+  );
 };
 
 export default Routes;

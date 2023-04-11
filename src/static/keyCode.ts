@@ -212,7 +212,7 @@ export const KEY_BOARD = [
   ],
   [
     {
-      code: "Shift",
+      code: "LeftShift",
       main: "shift",
     },
     {
@@ -266,7 +266,7 @@ export const KEY_BOARD = [
       sub: "/",
     },
     {
-      code: "Shift",
+      code: "RightShift",
       main: "shift",
     },
   ],

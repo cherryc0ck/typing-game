@@ -15,6 +15,13 @@ export const isStrKeyCheck = (keyCode: string): boolean => {
 };
 
 export const isFuncKeyCheck = (keyCode: string): boolean => {
-  const funcCode = ["Enter", "Tab", "CapsLock", "Shift", "Backspace"];
+  const funcCode = [
+    "Enter",
+    "Tab",
+    "CapsLock",
+    "LeftShift",
+    "RightShift",
+    "Backspace",
+  ];
   return funcCode.includes(keyCode);
 };

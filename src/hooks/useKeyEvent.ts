@@ -6,7 +6,12 @@ const useKeyEventListener = () => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      e.key === "CapsLock" && setIsEn((prev) => !prev);
+      if (e.key === "Shift") {
+        e.location === 1
+          ? setCurrentKey("LeftShift")
+          : setCurrentKey("RightShift");
+        return;
+      }
       setCurrentKey(e.key);
     };
 

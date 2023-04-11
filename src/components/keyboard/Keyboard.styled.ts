@@ -14,8 +14,7 @@ export const Container = styled.div`
         rgba(255, 255, 255, 0.243) 64.3%,
         rgba(255, 255, 255, 0.3) 96.67%
       ),
-      #fff;
-    /* #c4c4c4; */
+      ${theme.colors.sub};
     box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.25);
     border-radius: ${theme.radius.big};
 

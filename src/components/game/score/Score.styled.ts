@@ -10,7 +10,8 @@ export const Span = styled(motion.span)`
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%;
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.sub};
     ${theme.typo.eBold16};
+    color: ${theme.colors.main};
   `};
 `;

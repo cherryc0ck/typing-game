@@ -1,14 +1,13 @@
 import type { PropsKeyCode } from "@/types/keyCode";
-import * as S from "./Key.styled";
-import { SpecialKey } from "./SpecialKey";
-import { AlphabetKey } from "./AlphabetKey";
-import { FunctionalKey } from "./FunctionalKey";
 import {
   isNumKeyCheck,
   isSpecialKeyCheck,
   isStrKeyCheck,
   isFuncKeyCheck,
 } from "@/utils/keyCodeCheck";
+import { SpecialKey } from "./SpecialKey";
+import { AlphabetKey } from "./AlphabetKey";
+import { FunctionalKey } from "./FunctionalKey";
 
 type KeyProps = PropsKeyCode & {
   isEn: boolean;

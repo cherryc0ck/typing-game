@@ -4,37 +4,32 @@ import { useGameScore } from "@/context/game/GameScoreContext";
 import CountDown from "@/components/game/countDown/CountDown";
 import Score from "@/components/game/score/Score";
 import GameFuncBtns from "@/components/game/gameFuncBtns/GameFuncBtns";
+import WordInput from "@/components/common/input/word/WordInput";
 import * as S from "./BaseGame.styled";
 
 type BaseGameProps = {
-  isPlay: boolean;
   currentWord: string;
   onNextWord: () => void;
-  onStartGame: () => void;
-  onPauseGame: () => void;
-  onStopGame: () => void;
 };
 
-const BaseGame = ({
-  isPlay,
-  currentWord,
-  onNextWord,
-  onStartGame,
-  onPauseGame,
-  onStopGame,
-}: BaseGameProps) => {
+const BaseGame = ({ currentWord, onNextWord }: BaseGameProps) => {
   const [inputWord, setInputWord] = useState<string>("");
+  const [isWordCheck, setIsWordCheck] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const { addScore } = useGameScore();
 
   useEffect(() => {
     inputRef.current?.focus();
-    onStartGame();
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    vaildWordCheck(e.target.value);
     setInputWord(e.target.value);
+  };
+
+  const vaildWordCheck = (value: string) => {
+    currentWord.includes(value) ? setIsWordCheck(true) : setIsWordCheck(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,29 +38,21 @@ const BaseGame = ({
       onNextWord();
       setInputWord("");
       addScore();
+      setIsWordCheck(true);
     }
   };
 
   return (
     <S.Container>
-      <GameFuncBtns
-        isPlay={isPlay}
-        onStartGame={onStartGame}
-        onStopGame={onStopGame}
-        onPauseGame={onPauseGame}
-      />
+      <GameFuncBtns />
       <Score />
-      <CountDown
-        isPlay={isPlay}
-        onStartGame={onStartGame}
-        onStopGame={onStopGame}
-      />
+      <CountDown />
       <S.Word>{currentWord}</S.Word>
       <S.Form onSubmit={handleSubmit}>
-        <input
-          type="text"
+        <WordInput
           placeholder="Please enter the above words..."
           ref={inputRef}
+          isWordCheck={isWordCheck}
           value={inputWord}
           onChange={handleInputChange}
         />

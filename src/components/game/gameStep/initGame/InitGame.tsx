@@ -1,15 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-import Button from "@/components/common/base/Button";
+import { useGameMode } from "@/context/game/GameModeContext";
+import { useThemeColor } from "@/context/color/ThemeColorContext";
+import SettingTheme from "@/components/settingTheme/SettingTheme";
+import Button from "@/components/common/button/base/Button";
 import * as S from "./InitGame.styled";
 
 type InitGameProps = {
   onSetWords: (words: string[]) => void;
-  onSetGameMode: () => void;
 };
 
-const InitGame = ({ onSetGameMode, onSetWords }: InitGameProps) => {
+const InitGame = ({ onSetWords }: InitGameProps) => {
+  const { handleSetGameMode, handleStartPlay } = useGameMode();
+  const [isSetting, setIsSetting] = useState(false);
   useEffect(() => {
     axios
       .get("https://random-word-api.herokuapp.com/word?number=300")
@@ -17,9 +21,25 @@ const InitGame = ({ onSetGameMode, onSetWords }: InitGameProps) => {
       .catch((error) => new Error(error));
   }, []);
 
+  const handleStartGame = () => {
+    handleStartPlay();
+    handleSetGameMode("base");
+  };
+
+  const handleChangeSetting = () => {
+    setIsSetting((prev) => !prev);
+  };
+
   return (
     <S.Container>
-      <Button onClick={onSetGameMode}>Game Start</Button>
+      {isSetting ? (
+        <SettingTheme onChangeSetting={handleChangeSetting} />
+      ) : (
+        <>
+          <Button onClick={handleStartGame}>Game Start</Button>
+          <Button onClick={handleChangeSetting}>Theme Setting</Button>
+        </>
+      )}
     </S.Container>
   );
 };

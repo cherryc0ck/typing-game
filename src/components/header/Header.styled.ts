@@ -7,14 +7,15 @@ export const Header = styled.header`
 
     h1 {
       margin-bottom: 2rem;
-      background: -webkit-linear-gradient(-70deg, #189cc4 0%, red 100%);
-      background-clip: text;
+      color: ${theme.colors.sub};
       font-family: "lato";
       ${theme.typo.heavy32};
+      /* background: -webkit-linear-gradient(-70deg, #189cc4 0%, red 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -webkit-box-decoration-break: clone;
-      -webkit-background-clip: text;
+      -webkit-background-clip: text; */
     }
   `}
 `;

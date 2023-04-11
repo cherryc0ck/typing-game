@@ -1,10 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const EffectStyle = (isEffect: boolean) => css`
-  background-color: ${isEffect ? "hotpink" : "#f1f1ef"};
-  box-shadow: ${isEffect
-    ? "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 3px rgba(0, 0, 0, 0.45), inset 0px 3px 0px hotpink"
-    : "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 3px rgba(0, 0, 0, 0.45), inset 0px 3px 0px #ffffff"};
+  ${({ theme }) => css`
+    background-color: ${isEffect ? theme.colors.main : "#f1f1ef"};
+    box-shadow: ${isEffect
+      ? `0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 3px rgba(0, 0, 0, 0.45), inset 0px 3px 0px ${theme.colors.main}`
+      : `0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 3px rgba(0, 0, 0, 0.45), inset 0px 3px 0px ${theme.colors.sub}`};
+    span {
+      color: ${isEffect && theme.colors.sub};
+    }
+  `}
 `;
 
 export const DefaultStyle = css`
@@ -77,7 +82,8 @@ export const FuncKey = styled.li<{ isEffect: boolean; code: string }>`
   ${({ isEffect, code }) => css`
     display: flex;
     flex-direction: column;
-    ${code === "Shift" && ShiftKeyStyle};
+    ${code === "LeftShift" && ShiftKeyStyle};
+    ${code === "RightShift" && ShiftKeyStyle};
     ${code === "CapsLock" && CapsLockKeyStyle};
     ${code === "Enter" && EnterKeyStyle};
     ${code === "Tab" && TabKeyStyle};

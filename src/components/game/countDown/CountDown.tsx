@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 import * as S from "./CountDown.styled";
+import { useGameMode } from "@/context/game/GameModeContext";
 
-type CountDownProps = {
-  isPlay: boolean;
-  onStartGame: () => void;
-  onStopGame: () => void;
-};
-
-const CountDown = ({ isPlay, onStartGame, onStopGame }: CountDownProps) => {
+const CountDown = () => {
   const [timer, setTimer] = useState(60);
+  const { isPlay, handleStopPlay, handleSetGameMode } = useGameMode();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -17,11 +13,16 @@ const CountDown = ({ isPlay, onStartGame, onStopGame }: CountDownProps) => {
 
     if (timer === 0) {
       clearInterval(id);
-      onStopGame();
+      handleStopPlay();
+      handleSetGameMode("end");
+    }
+
+    if (!isPlay) {
+      clearInterval(id);
     }
 
     return () => clearInterval(id);
-  }, [timer]);
+  }, [timer, isPlay, handleStopPlay, handleSetGameMode]);
 
   return <S.Span>{timer}</S.Span>;
 };

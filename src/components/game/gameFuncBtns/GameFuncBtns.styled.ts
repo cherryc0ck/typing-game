@@ -13,11 +13,16 @@ export const Container = styled.div`
       width: 4.5rem;
       height: 4.5rem;
       border-radius: 50%;
-      background-color: ${theme.colors.white};
+      background-color: ${theme.colors.sub};
       ${theme.typo.eBold16};
+      transition: all 0.2s ease-in-out;
+
+      :hover {
+        transform: scale(1.1);
+      }
 
       svg {
-        color: ${theme.colors.black};
+        color: ${theme.colors.main};
       }
     }
   `}

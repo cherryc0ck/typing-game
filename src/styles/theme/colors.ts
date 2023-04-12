@@ -1,26 +1,23 @@
 export const colors = {
   white: "#FFFFFF",
+  whitePurple: "#EEF1FF",
+  whitePeach: "#DDF7E3",
   black: "#141414",
-  black600: "#2F1B1A",
-  gray900: "#191919",
   gray800: "#888",
-  gray700: "#4C4C4C",
   gray600: "#666666",
   gray500: "#7F7F7F",
   gray400: "#888888",
   gray300: "#B2B2B2",
   gray200: "#cccccc",
   gray100: "#E5E5E5",
-  gray50: "#F6F6F6",
-  gray10: "#FAFAFA",
+  purple: "#B1B2FF",
   blue: "#189cc4",
+  blueMint: "#31C6D4",
+  blueOrange: "#B0DAFF",
   red: "#f05650",
-  navy: "#301b3f",
-  pink: "pink",
-
-  //주황..?
-  //#ffa477
-
-  //핫핑크 비슷
-  //"#fb6f92"
+  pink: "#ffd1dc",
+  mint: "#a3e7d6",
+  peach: "#f7786b",
+  vanilla: "#ffffb5",
+  green: "#47e1a8",
 };

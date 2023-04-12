@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import { GameScoreProvider } from "@/context/game/GameScoreContext";
+import { useGameMode } from "@/context/game/GameModeContext";
 import BaseGame from "./baseGame/BaseGame";
 import EndGame from "./endGame/EndGame";
 import InitGame from "./initGame/InitGame";
-import { useGameMode } from "@/context/game/GameModeContext";
 
 const GameStep = () => {
   const [words, setWords] = useState<string[]>([]);

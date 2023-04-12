@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { useGameMode } from "@/context/game/GameModeContext";
-import { useThemeColor } from "@/context/color/ThemeColorContext";
 import SettingTheme from "@/components/settingTheme/SettingTheme";
 import Button from "@/components/common/button/base/Button";
 import * as S from "./InitGame.styled";

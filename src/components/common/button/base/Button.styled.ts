@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
   ${({ theme }) => css`
-    width: 17.5rem;
+    ${theme.flex.row()};
+    min-width: 17.5rem;
     padding: 1rem 2.2rem;
     border: 1px solid ${theme.colors.sub};
     border-radius: ${theme.radius.basic};

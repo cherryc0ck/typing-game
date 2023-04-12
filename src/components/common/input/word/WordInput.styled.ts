@@ -17,6 +17,7 @@ export const Input = styled.input<{ isWordCheck: boolean }>`
   ${({ theme, isWordCheck }) => css`
     width: 100%;
     padding: 1rem 0 1rem 1.2rem;
+    border: 1px solid ${theme.colors.sub};
     border-radius: ${theme.radius.small};
     ${theme.typo.heavy18};
 

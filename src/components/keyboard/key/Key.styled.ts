@@ -59,13 +59,13 @@ export const BackspaceKeyStyle = css`
   width: 8.4rem;
 `;
 
-export const AlphabetKey = styled.li<{ isEffect: boolean; isEn: boolean }>`
-  ${({ theme, isEffect, isEn }) => css`
+export const AlphabetKey = styled.li<{ isEffect: boolean }>`
+  ${({ theme, isEffect }) => css`
     ${theme.flex.col()};
     ${DefaultStyle};
     ${DefaultWidth}
     ${EffectStyle(isEffect)};
-    font-family: ${isEn ? "lato" : "nanumSquareNeo"};
+    font-family: "lato";
   `};
 `;
 

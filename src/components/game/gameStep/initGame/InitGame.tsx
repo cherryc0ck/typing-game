@@ -18,6 +18,7 @@ const InitGame = ({ onSetWords }: InitGameProps) => {
       .get("https://random-word-api.herokuapp.com/word?number=300")
       .then(({ data }) => onSetWords(data))
       .catch((error) => new Error(error));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleStartGame = () => {

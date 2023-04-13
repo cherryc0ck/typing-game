@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 const useKeyEventListener = () => {
   const [currentKey, setCurrentKey] = useState<string>("");
-  const [isEn, setIsEn] = useState<boolean>(true);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -22,7 +21,6 @@ const useKeyEventListener = () => {
 
   return {
     currentKey,
-    isEn,
   };
 };
 

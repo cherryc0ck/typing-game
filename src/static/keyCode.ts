@@ -1,7 +1,3 @@
-// backspace, tabs: 8.4rem, start
-// capslock: 9.6rem, start
-// shift: 12rem,
-
 export const KEY_BOARD = [
   [
     {

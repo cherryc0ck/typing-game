@@ -6,7 +6,6 @@ export const Header = styled.header`
     padding: 1rem 2rem;
 
     h1 {
-      margin-bottom: 2rem;
       color: ${theme.colors.sub};
       font-family: "lato";
       ${theme.typo.heavy32};

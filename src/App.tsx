@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { useThemeColor } from "@/context/color/ThemeColorContext";
 import { chooseTheme } from "@/utils/chooseTheme";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 import { GlobalStyle } from "@/styles/globalStyles";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <GlobalStyle theme={chooseTheme(themeColor)} />
       <Header />
       <Outlet />
+      <Footer />
     </ThemeProvider>
   );
 }

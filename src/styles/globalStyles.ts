@@ -84,6 +84,10 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%; 
+
+    @media screen and (max-width: 1100px) {
+      font-size: 52.5%;
+    }
   }
 
   body {

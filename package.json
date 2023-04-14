@@ -1,5 +1,6 @@
 {
-  "name": "lotto-analytics",
+  "name": "typing-game",
+  "homepage": "https://cherryc0ck.github.io/typing-game/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +14,7 @@
     "express": "^4.18.2",
     "express-generator": "^4.16.1",
     "framer-motion": "^10.10.0",
+    "gh-pages": "^5.0.0",
     "immer": "^9.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,6 +32,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "craco build",
+    "deploy": "gh-pages -d build",
     "server": "cd server && nodemon server",
     "client": "craco start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",

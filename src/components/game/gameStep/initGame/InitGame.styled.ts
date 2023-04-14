@@ -58,7 +58,6 @@ export const Container = styled.div`
     margin-bottom: 3rem;
     border: 1.2rem solid ${theme.colors.sub};
     border-radius: ${theme.radius.basic};
-    background-color: pink;
 
     ::after {
       content: "";

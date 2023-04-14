@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/gh/static/js/main.e18549be.js",
-    "index.html": "/gh/index.html",
-    "main.e18549be.js.map": "/gh/static/js/main.e18549be.js.map"
+    "main.js": "/gh-pages/static/js/main.b2d65fb1.js",
+    "index.html": "/gh-pages/index.html",
+    "main.b2d65fb1.js.map": "/gh-pages/static/js/main.b2d65fb1.js.map"
   },
   "entrypoints": [
-    "static/js/main.e18549be.js"
+    "static/js/main.b2d65fb1.js"
   ]
 }

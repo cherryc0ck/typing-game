@@ -6,7 +6,7 @@ import purpleThemeImg from "@/assets/background/purpleTheme2.jpg";
 import mintThemeImg from "@/assets/background/mintTheme.jpg";
 import peachThemeImg from "@/assets/background/peachTheme.jpg";
 import vanillaThemeImg from "@/assets/background/vanillaTheme.jpg";
-import lightThemeImg from "@/assets/background/lightTheme.jpg";
+// import lightThemeImg from "./images/lightTheme.jpg";
 import greenThemeImg from "@/assets/background/greenTheme.jpg";
 
 const BackgroundTheme = (theme: string) => css`
@@ -49,7 +49,7 @@ const BackgroundVanilla = () => css`
 `;
 
 const BackgroundLight = () => css`
-  background-image: url(${lightThemeImg});
+  background-image: url("./images/lightTheme.jpg");
 `;
 
 const BackgroundGreen = () => css`

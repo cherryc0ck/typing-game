@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/typing-game/static/js/main.da643dff.js",
-    "index.html": "/typing-game/index.html",
-    "main.da643dff.js.map": "/typing-game/static/js/main.da643dff.js.map"
+    "main.js": "/gh-pages/static/js/main.ea4d7b1b.js",
+    "index.html": "/gh-pages/index.html",
+    "main.ea4d7b1b.js.map": "/gh-pages/static/js/main.ea4d7b1b.js.map"
   },
   "entrypoints": [
-    "static/js/main.da643dff.js"
+    "static/js/main.ea4d7b1b.js"
   ]
 }

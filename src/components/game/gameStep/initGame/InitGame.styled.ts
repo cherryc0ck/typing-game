@@ -1,14 +1,5 @@
 import styled, { css } from "styled-components";
 
-import pinkThemeImg from "@/assets/background/pinkTheme.jpg";
-import darkThemeImg from "@/assets/background/darkTheme.jpg";
-import purpleThemeImg from "@/assets/background/purpleTheme2.jpg";
-import mintThemeImg from "@/assets/background/mintTheme.jpg";
-import peachThemeImg from "@/assets/background/peachTheme.jpg";
-import vanillaThemeImg from "@/assets/background/vanillaTheme.jpg";
-// import lightThemeImg from "./images/lightTheme.jpg";
-import greenThemeImg from "@/assets/background/greenTheme.jpg";
-
 const BackgroundTheme = (theme: string) => css`
   ${theme === "pink" && BackgroundPink};
   ${theme === "dark" && BackgroundDark};
@@ -25,35 +16,35 @@ const BackgroundTheme = (theme: string) => css`
 `;
 
 const BackgroundPink = () => css`
-  background-image: url(${pinkThemeImg});
+  background-image: url("./images/background/pinkTheme.jpg");
 `;
 
 const BackgroundDark = () => css`
-  background-image: url(${darkThemeImg});
+  background-image: url("./images/background/darkTheme.jpg");
 `;
 
 const BackgroundPurple = () => css`
-  background-image: url(${purpleThemeImg});
+  background-image: url("./images/background/purpleTheme.jpg");
 `;
 
 const BackgroundMint = () => css`
-  background-image: url(${mintThemeImg});
+  background-image: url("./images/background/mintTheme.jpg");
 `;
 
 const BackgroundPeach = () => css`
-  background-image: url(${peachThemeImg});
+  background-image: url("./images/background/peachTheme.jpg");
 `;
 
 const BackgroundVanilla = () => css`
-  background-image: url(${vanillaThemeImg});
+  background-image: url("./images/background/vanillaTheme.jpg");
 `;
 
 const BackgroundLight = () => css`
-  background-image: url("./images/lightTheme.jpg");
+  background-image: url("./images/background/lightTheme.jpg");
 `;
 
 const BackgroundGreen = () => css`
-  background-image: url(${greenThemeImg});
+  background-image: url("./images/background/greenTheme.jpg");
 `;
 
 export const Container = styled.div`

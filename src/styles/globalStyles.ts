@@ -8,35 +8,35 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 300;
-    src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-aLt.ttf') format("truetype");
+    src: url('./fonts/NanumSquareNeo/ttf/NanumSquareNeo-aLt.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-bRg.ttf') format("truetype");
+    src: url('./fonts/NanumSquareNeo/ttf/NanumSquareNeo-bRg.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 500;
-    src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-cBd.ttf') format("truetype");
+    src: url('./fonts/NanumSquareNeo/ttf/NanumSquareNeo-cBd.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 600;
-    src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-dEb.ttf') format("truetype");
+    src: url('./fonts/NanumSquareNeo/ttf/NanumSquareNeo-dEb.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'nanumSquareNeo';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/NanumSquareNeo/ttf/NanumSquareNeo-eHv.ttf') format("truetype");
+    src: url('./fonts/NanumSquareNeo/ttf/NanumSquareNeo-eHv.ttf') format("truetype");
   }
 
   @font-face {
@@ -44,35 +44,35 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'lato';
     font-style: normal;
     font-weight: 100;
-    src: url('/fonts/Lato/ttf/Lato-Thin.ttf') format("truetype");
+    src: url('./fonts/Lato/ttf/Lato-Thin.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 300;
-    src: url('/fonts/Lato/ttf/Lato-Light.ttf') format("truetype");
+    src: url('./fonts/Lato/ttf/Lato-Light.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/Lato/ttf/Lato-Regular.ttf') format("truetype");
+    src: url('./fonts/Lato/ttf/Lato-Regular.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/Lato/ttf/Lato-Bold.ttf') format("truetype");
+    src: url('./fonts/Lato/ttf/Lato-Bold.ttf') format("truetype");
   }
   @font-face {
     font-display: swap;
     font-family: 'lato';
     font-style: normal;
     font-weight: 900;
-    src: url('/fonts/Lato/ttf/Lato-Black.ttf') format("truetype");
+    src: url('./fonts/Lato/ttf/Lato-Black.ttf') format("truetype");
   }
 
   * {
